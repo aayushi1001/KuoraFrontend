@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eee;
+    padding: 0 16px;
+}
+
+header{
+    background-color: #f5ba13;
+    margin: auto -16px;   
+    /* auto centers the value within the container */
+    padding: 10px 40px;   
+    /* top/bottom right/left */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1{
+    color: white;
+    font-family: "McLaren" , cursive;
+    font-weight: 200;
+}
+
+footer{
+    text-align: center; 
+    /* top center */
+    bottom: 0;
+    /* top center because position was by default relative and it got placed relative to the first element */
+    position: absolute;
+    /* bottom left */
+    width: 100%;
+    /* bottom middle */
+    height: 2.5rem;
+}
+
+footer p{
+    color: rgb(165, 164, 164);
+}
+
+.note{
+    padding: 10px;
+    margin: 16px;
+    border: 1px solid black;
+    width: 240px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    float: left;
+}
+
+.note h1{
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.note p{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    word-wrap: break-word;  
+    /* breaks a single word also if it goes out of border */
+    white-space: pre-wrap;
+}
+
+.card{
+    /* display: block; */
+    border: 1px solid black;
+    box-shadow: 0 2px 5px #ccc;
+    border-radius: 7px;
+    word-wrap: break-word;
+    margin: 2em;
+    font-size: 0.97em;
+    padding:0 1em;
+}
+
+.top{
+    border-bottom: 0.7px solid grey;
+    padding: 1em;
+}
+
+.dot{
+    float: right;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.top img{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    display: inline;
+    position: relative;
+}
+
+.container {
+    display: flex;
+}
+  
+.image {
+    flex-basis: 5em;
+}
+
+.rate{
+    margin-top: 0.3em;
+}
+
+.checked {
+    color: orange;
+}
+
+.middle{
+    border-bottom: 0.7px solid grey;
+    padding: 1em;
+}
+
+.tag{
+    margin-top: 0.3em;
+    border: 1px solid rgb(78, 3, 3);
+    border-radius: 2em;
+    width: fit-content;
+    padding: 0 0.4em;
+    background-color:lightgreen
+}
+
+.bottom{
+    padding: 1em;
+}
+
+.bottom span{
+    margin-right: 2em;
+}
+
+.date{
+    float: right;
+    color: grey;
+    font-size: 0.8em;
+    margin-right: 0 !important;
+}
+
+.bottom button{
+    outline: none;
+    border: none !important;
+    font-size: 1.5em;
+    margin-right: 0.4em;
+}
