@@ -1,6 +1,31 @@
-import React from 'react';
+import React , { useState , useEffect } from 'react';
 
-export const Modal = ({ show , closeModalHandler }) => {
+export const Modal = ({ show , closeModalHandler ,post_email , post_id}) => {
+
+    //const [comment, setComment] = useState([]);
+
+    // const getData=()=>{
+    //     const url = "http://127.0.0.1:3000/comment_get_postemail_postid/" + post_email + "/" + post_id
+    //     console.log(url)
+    //     fetch(url)
+    //       .then(function(response){
+    //         // console.log(response)
+    //         return response.json();
+    //       })
+    //       .then(function(myJson) {
+    //         console.log(myJson);
+    //       });
+    //   }
+
+    // useEffect(()=>{
+    //     getData()
+    // },[])
+
+    if(show){
+        const url = "http://127.0.0.1:3000/comment_get_postemail_postid/" + post_email + "/" + post_id;
+        console.log(url);
+    }
+
     return (
         <div className="modal-wrapper"
             style={{

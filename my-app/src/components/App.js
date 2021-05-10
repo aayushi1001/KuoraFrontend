@@ -9,7 +9,8 @@ function App(){
     const [data, setData] = useState([]);
     const [name , setName] = useState();
     const [pic , setPic] = useState();
-    const [likes , setLikes] = useState();
+    const [likes , setLikes] = useState(0);
+    const [comments , setComments] = useState(0);
 
     function findname(email){
         // console.log(email)
@@ -41,6 +42,22 @@ function App(){
         return likes;
     }
 
+    function getcomments(e1 , i1){
+        const link2 = "http://127.0.0.1:3000/comment_get_postemail_postid/" + e1 + "/" + i1;
+        console.log(link2);
+        fetch(link2)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(myJson){
+            console.log(myJson.comment);
+            var n = myJson.comment.length;
+            return n;
+        })
+        .then(res => setComments(res));
+        return comments;
+    }
+
     
     const getData=()=>{
         fetch("http://127.0.0.1:3000/post_get")
@@ -57,11 +74,6 @@ function App(){
     useEffect(()=>{
         getData()
     },[])
-
-    
-
-
-
 
     return(
         <div>
@@ -100,15 +112,14 @@ function App(){
                 star = {details[0].star}
                 question = {item.article}
                 like = {getlikes(item.creator_email , item.postid)}
-                dislike = {details[0].dislike}
                 tag = {item.tag}
-                comment = {details[0].comment}
+                comment = {getcomments(item.creator_email , item.postid)}
                 dateOfPost = {details[0].dateOfPost}
                 pic = {pic}
                 email = {item.creator_email}
                 id = {item.postid}
                 viewer = {"aayushi@gmail.com"}
-            />
+        />
        )
      }
     </div>

@@ -39,7 +39,6 @@ function Card(props){
             
           });
     }
-        
 
 
     return(
@@ -68,20 +67,21 @@ function Card(props){
                 <p className="tag">{props.tag}</p>
             </div>
             <div className="bottom">
+
                 <button class="like" onClick={vote}>
                 <i class='fas fa-thumbs-up'></i>
                 </button>
+
                 <span>{props.like}</span>
-                {/* <button class="dislike">
-                <i class='fas fa-thumbs-down'></i>
-                </button>
-                <span>{props.dislike}</span> */}
                 <button className="btn-openModal" onClick={() => setShow(true)}><i class='fas fa-comments'></i></button>
                 <span>{props.comment}</span>
                 <span className="date">{props.dateOfPost}</span>
             </div>
-            {show ? <div className="back-drop" onclick={closeModalHandler}></div> : null}
-            <Modal show={show} closeModalHandler={closeModalHandler} />  
+            {/* {show ? <div className="back-drop" onclick={closeModalHandler}></div> : null} */}
+            <Modal 
+            show={show} 
+            closeModalHandler={closeModalHandler} 
+            />  
         </div>
     );
 }
