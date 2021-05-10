@@ -40,6 +40,22 @@ function Card(props){
           });
     }
 
+    function getcomments(){
+        var e = document.getElementById('e').innerHTML;
+        var i = document.getElementById('i').innerHTML;
+        console.log(e + " " + i);
+        const url = "http://127.0.0.1:3000/comment_get_postemail_postid/" + e + "/" + i;
+        fetch(url)
+          .then(function(response){
+            // console.log(response)
+            return response.json();
+          })
+          .then(function(myJson) {
+            console.log(myJson);
+          });
+          
+    }
+
 
     return(
         <div className="card">
@@ -73,15 +89,19 @@ function Card(props){
                 </button>
 
                 <span>{props.like}</span>
-                <button className="btn-openModal" onClick={() => setShow(true)}><i class='fas fa-comments'></i></button>
+                <button className="btn-openModal" onClick={getcomments}><i class='fas fa-comments'></i></button>
                 <span>{props.comment}</span>
                 <span className="date">{props.dateOfPost}</span>
+                <div id="secret">
+                    <p id="e">{props.email}</p>
+                    <p id="i">{props.id}</p>
+                </div>
             </div>
             {/* {show ? <div className="back-drop" onclick={closeModalHandler}></div> : null} */}
-            <Modal 
+            {/* <Modal 
             show={show} 
             closeModalHandler={closeModalHandler} 
-            />  
+            />   */}
         </div>
     );
 }

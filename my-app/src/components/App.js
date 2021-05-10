@@ -42,21 +42,21 @@ function App(){
         return likes;
     }
 
-    function getcomments(e1 , i1){
-        const link2 = "http://127.0.0.1:3000/comment_get_postemail_postid/" + e1 + "/" + i1;
-        console.log(link2);
-        fetch(link2)
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(myJson){
-            console.log(myJson.comment);
-            var n = myJson.comment.length;
-            return n;
-        })
-        .then(res => setComments(res));
-        return comments;
-    }
+    // function getcomments(e1 , i1){
+    //     const link2 = "http://127.0.0.1:3000/comment_get_postemail_postid/" + e1 + "/" + i1;
+    //     console.log(link2);
+    //     fetch(link2)
+    //     .then(function(response){
+    //         return response.json();
+    //     })
+    //     .then(function(myJson){
+    //         console.log(myJson.comment);
+    //         var n = myJson.comment.length;
+    //         return n;
+    //     })
+    //     .then(res => setComments(res));
+    //     return comments;
+    // }
 
     
     const getData=()=>{
@@ -113,7 +113,7 @@ function App(){
                 question = {item.article}
                 like = {getlikes(item.creator_email , item.postid)}
                 tag = {item.tag}
-                comment = {getcomments(item.creator_email , item.postid)}
+                comment = {2}
                 dateOfPost = {details[0].dateOfPost}
                 pic = {pic}
                 email = {item.creator_email}
