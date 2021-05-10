@@ -90,8 +90,8 @@ footer p{
     height: 3em;
     width: 3em;
     border-radius: 50%;
-    display: inline;
-    position: relative;
+    /* display: inline; */
+    /* position: relative; */
 }
 
 .container {
@@ -144,4 +144,5 @@ footer p{
     border: none !important;
     font-size: 1.5em;
     margin-right: 0.4em;
+    cursor: pointer;
 }
