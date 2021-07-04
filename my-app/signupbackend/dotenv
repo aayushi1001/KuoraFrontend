@@ -1,0 +1,1 @@
+DATABASE_ACCESS = "mongodb+srv://root:root@cluster0.hun21.mongodb.net/mytable?retryWrites=true&w=majority"

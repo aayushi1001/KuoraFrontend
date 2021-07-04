@@ -1,0 +1,9 @@
+.news-feed {
+  position: relative;
+  top: 15vh;
+  padding-left: 20px;
+  /* border: 1px solid gray; */
+  width: 52vw;
+  /* z-index: -1; */
+  /* background-color: gray; */
+}

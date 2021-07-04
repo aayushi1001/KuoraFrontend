@@ -1,0 +1,12 @@
+POST http://localhost:4000/app
+Content-Type: application/json
+
+
+{
+    "firstName":"Ayush",
+    "lastName":"Ranjan",
+    "email":"ayush@123",
+    "password":"asdfgh",
+    "staff":"non",
+    "bio":"Ayush"
+}
