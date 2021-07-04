@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+body {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+}
+.image_div{
+  background-image:url('./icons/image1.jpeg');
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  display: flex;
+}
+.image_div .mainheading{
+  margin: 150px 50px -10px 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  font-size: 50px;
+  color: #311b92;
+  font-family:Comic Sans MS, Comic Sans, cursive;
+  
+}
+.image_div p{
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  margin-left: 0.2vw;
+}
+.image_div img{
+  margin: 140px 15px 0px 150px;
+  height: 100px;
+  width: 150px;
+}
+.info{
+  background-color: white;
+  height: 550px;
+  width: 450px;
+  margin-top: 100px;
+  margin-left: 250px;
+  border-radius: 10px;
+  opacity: 0.7;
+  padding: 30px;
+  box-shadow: 5px 10px 20px #311b92;
+}
+.info .divheading{
+  font-weight: bold;
+  font-size: 30px;
+}
+.info p{
+  font-size: 15px;
+  font-weight: 500;
+  padding-top: 15px;
+}
+.info h2{
+  font-weight: bold;
+  color : #311b92;
+  padding-top: 10px;
+  font-style: italic;
+}
+
+/*Media Queries */
+
+
+@media only screen and (max-width:1200px){
+  
+}
+@media only screen and (max-width:1023px){
+  .image_div{
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+    display: flex;
+  }
+}
+@media only screen and (max-width:767px){
+  .image_div{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+  }
+  .image_div .mainheading{
+    font-size: 35px;
+    margin-top: 120px;
+    letter-spacing: 2px;
+  }
+  .image_div img{
+    margin: 100px 15px 0px 120px;
+    height: 90px;
+    width: 70px;
+  }
+  .image_div p{
+    font-size: 12px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    padding-top: 5px;
+  }
+  .info{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    height: 350px;
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 0px;
+    border-radius: 30px;
+    opacity: 0.7;
+    padding: 30px;
+    box-shadow: 10px 10px 20px rgba(5, 87, 2, 0.87);
+  }
+  .info .divheading{
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .info p{
+    font-size: 10px;
+   
+  }
+  .info h2{
+    font-size: 15px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+  }
+.info OutlinedButtons {
+  margin-left: 100px;
+}
+}
+@media only screen and (max-width:480px){
+  
+}

@@ -1,0 +1,22 @@
+body{
+    background-color:#ede7f6!important;
+}
+#signup{
+    
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px #311b92;
+    background-color: white;
+    margin-top: 30px;
+    padding: 0 20px;
+    
+}
+#signin{
+    
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px #311b92;
+    background-color: white;
+    margin-top: 120px;
+    padding: 0 20px;
+}
